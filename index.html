@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-9p/duG/3l0YNN4FtfDmC04WX/mxhbv81zO9nFrsQon2F7xWf4z6StxwGevY0cU7KdD4sIwTBQHxrA9uP0S41Hg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="styles/app.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  </head>
+  <body>
+    <header id="header">Payment Request Form</header>
+    <div>
+      <div class="inside-container">
+    <h2>Payment Details</h2>
+    <h4 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Contact Details</h4>
+    <h5>Send Payment Request to</h5>
+    <div>
+      <select id="drop-list" class="option-list">
+      </select>
+    </div>
+    <div class="details">
+    <label for="name" class="name" >Name</label>
+    <input type="text" class="inputbox" placeholder="Enter Your Name" id="requester-name" required>
+
+    <label for="name" class="email" >Email</label>
+    <input type="text" class="inputbox1" placeholder="abc12@gmail.com" id="email" required>
+
+  </div>
+  <div>
+    <h4 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Request Details</h4>
+    <div class="amountdrop">
+    <label for="Amount" class="amount">Amount</label><br>
+    <select class="symbollist" id="currency-symbol">
+      <option value="$">$</option>
+      <option value="₹">₹</option>
+      <input type="number" class="digits" id="request-amount" placeholder="000">
+    </select>
+    <div class="date-container">
+    <label for="date" class="due-date" >Due Date</label><br>
+    <input type="date" class="input-date" id="due-date" min="2024-07-16"></div>
+  </div>
+  </div>
+  <div>
+    <h5>Company name to show on request</h5>
+    <select class="select-list" id="select-company">
+      <option>Select Company</option>
+      <option value="GWC Data.ai">GWC Data.ai</option>
+      <option value="DOMO">DOMO</option>
+    </select>
+    <h5>Destination Account</h5>
+    <select name="account" class="select-list" id="account">
+      <option>Select Account</option>
+      <option value="11345677898 - SBI">11345677898 - SBI</option>
+      <option value="15052475698 - HDFC">15052475698 - HDFC</option>
+      <option value="15053357668 - AXIS">15053357668 - AXIX</option>
+    </select>
+    <span class="para">Incoming payments are placed in a secure receiving account to keep destination account details anonymous.</span>
+  </div>
+  <div class="btn"><button id="request-btn">Request Payment</button></div>
+  </div>
+    </div>
+
+
+
+    <main id="app"></main>
+    <script src="js/helpers.js"></script>
+    <script src="components/router.js"></script>
+    <script src="components/autocomplete.js"></script>
+    <script src="components/modal.js"></script>
+    <script src="components/table.js"></script>
+    <script src="components/floatingactionbutton.js"></script>
+    <script src="https://unpkg.com/ryuu.js"></script>
+    <script src="https://unpkg.com/@domoinc/domo-phoenix/build/global/domoPhoenixWithMaps.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

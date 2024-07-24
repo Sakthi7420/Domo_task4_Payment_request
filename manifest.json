@@ -1,0 +1,66 @@
+{
+  "name": "payment_req",
+  "version": "0.1.0",
+  "size": {
+    "width": 5,
+    "height": 3
+  },
+  "mapping": [
+    {
+      "dataSetId": "968af17d-8c5b-4baf-bd2b-3096bb33b5ba",
+      "alias": "payment_req_task",
+      "fields": []
+    }
+  ],
+  "collections":[
+    {
+      "name": "Payment_Request",
+      "schema":{
+        "columns": [
+          { "name": "requested_by", "type": "STRING" },
+          { "name": "requested_to", "type": "STRING" },
+          { "name": "contact_details", "type": "STRING" },
+          { "name": "request_details", "type": "STRING" }
+        ]
+      },
+      "syncEnabled":true
+    },
+    {
+      "name": "Payment_Request"
+    }
+  ],
+  "workflowMapping": [
+    {
+      "alias": "send_email",
+      "modelId": null,
+      "version": null,
+      "parameters": [
+        {
+          "name": "to",
+          "aliasedName": "to",
+          "type": "person",
+          "list": false,
+          "children": []
+        },
+        {
+          "name": "sub",
+          "aliasedName": "sub",
+          "type": "text",
+          "list": false,
+          "children": []
+        },
+        {
+          "name": "body",
+          "aliasedName": "body",
+          "type": "text",
+          "list": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  
+  "fileName": "manifest.json",
+  "id": "3e6d77fe-c8ca-4681-8063-a0dcfec89a3a",
+  "proxyId": "f362ff6e-a54d-42b5-8a9f-554821a5b378"
+}
